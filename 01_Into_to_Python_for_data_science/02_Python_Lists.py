@@ -52,6 +52,7 @@ print(house)
 # Print out the type of house
 print(type(house))
 
+
 # ====== 2. SUBSETTING LISTS ====== 
 
 # ----- Subset and conquer -----
@@ -112,6 +113,7 @@ x = [["a", "b", "c"],
      ["g", "h", "i"]]
 x[2][0]
 x[2][:2]
+
 
 # ====== 3. LIST MANIPULATION ====== 
 
