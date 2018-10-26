@@ -1,6 +1,6 @@
 # Datacamp Courses 
 
-Python 
+Python
 
 1. Intro to Python for Data Science
 Master the basics of data analysis in Python. Expand your skill set by learning scientific computing with numpy.
