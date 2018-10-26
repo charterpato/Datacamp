@@ -73,7 +73,7 @@ out2 = int(var2)
 # ----- Help! -----
 
 help(max)
-?max
+"?max"
 
 # ----- Multiple arguments -----
 
