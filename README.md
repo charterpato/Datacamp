@@ -1,6 +1,6 @@
 # Datacamp Courses 
 
-Python
+## Python
 
 1. Intro to Python for Data Science
 
