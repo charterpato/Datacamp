@@ -1,332 +1,231 @@
-# ====== 1. Hello Python! ======
+# ====== 1. NumPy ======
 
-# ----- Any comments? -----
+# ----- Your First NumPy Array -----
 
-# Division
-print(5 / 8)
+# Create list baseball
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
-# Addition
-print(7 + 10)
+# Import the numpy package as np
+import numpy as np
 
-# ----- Python as a calculator -----
+# Create a numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
 
-# Addition, subtraction
-print(5 + 5)
-print(5 - 5)
+# Print out type of np_baseball
+print(type(np_baseball))
 
-# Multiplication, division, modulo, and exponentiation
-print(3 * 5)
-print(10 / 2)
-print(18 % 7)
-print(4 ** 2)
+# ----- Baseball players' height -----
 
-# How much is your $100 worth after 7 years?
-print(100 * 1.1 ** 7)
+# height is available as a regular list
 
-# ====== 2. Variables & Types ======
+# Import numpy
+import numpy as np
 
-# ----- Variable Assignment -----
+# Create a numpy array from height: np_height
+np_height = np.array(height)
 
-# Create a variable savings
-savings = 100
+# Print out np_height
+print(np_height)
 
-# Print out savings
-print(savings)
+# Convert np_height to m: np_height_m
+np_height_m = np_height * 0.0254
 
-# ----- Calculations with variables -----
+# Print np_height_m
+print(np_height_m)
 
-# Create a variable savings
-savings = 100
+# ----- Baseball player's BMI -----
 
-# Create a variable factor
-factor = 1.10
+# height and weight are available as regular lists
 
-# Calculate result
-result = savings * factor ** 7
+# Import numpy
+import numpy as np
 
-# Print out result
-print(result)
+# Create array from height with correct units: np_height_m
+np_height_m = np.array(height) * 0.0254
 
-# ----- Other variable types -----
+# Create array from weight with correct units: np_weight_kg
+np_weight_kg = np.array(weight) * 0.453592
 
-# Create a variable desc
-desc = "compound interest"
+# Calculate the BMI: bmi
+bmi = np_weight_kg / np_height_m ** 2
 
-# Create a variable profitable
-profitable = True
+# Print out bmi
+print(bmi)
 
-# ----- Operations with other types -----
+# ----- Lightweight baseball players -----
 
-# Savings and factors
-savings = 100
-factor = 1.1
-desc = "compound interest"
+# height and weight are available as a regular lists
 
-# Assign product of factor and savings to year1
-year1 = savings * factor
+# Import numpy
+import numpy as np
 
-# Print the type of year1
-print(type(year1))
+# Calculate the BMI: bmi
+np_height_m = np.array(height) * 0.0254
+np_weight_kg = np.array(weight) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
 
-# Assign sum of desc and desc to doubledesc
-doubledesc = desc + desc
+# Create the light array
+light = bmi < 21
 
-# Print out doubledesc
-print(doubledesc)
+# Print out light
+print(light)
 
-# ----- Type conversion -----
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
 
-# Definition of savings and result
-savings = 100
-result = 100 * 1.10 ** 7
+# ----- Subsetting NumPy Arrays -----
 
-# Fix the printout
-print("I started with $" + str(savings) + " and now have $" + str(result) + ". Awesome!")
+# height and weight are available as a regular lists
 
-# Definition of pi_string
-pi_string = "3.1415926"
+# Import numpy
+import numpy as np
 
-# Convert pi_string into float: pi_float
-pi_float = float(pi_string)
+# Store weight and height lists as numpy arrays
+np_weight = np.array(weight)
+np_height = np.array(height)
 
-# ====== 3. LISTS ====== 
+# Print out the weight at index 50
+print(np_weight[50])
 
-# ----- Create a list -----
+# Print out sub-array of np_height: index 100 up to and including index 110
+print(np_height[100:111])
 
-# area variables (in square meters)
-hall = 11.25
-kit = 18.0
-liv = 20.0
-bed = 10.75
-bath = 9.50
 
-# Create list areas
-areas = [hall, kit, liv, bed, bath]
+# ====== 2. 2D NumPy Arrays ======
 
-# Print areas
-print(areas)
+# ----- Your First 2D NumPy Array -----
 
-# ----- Create list with different types -----
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
 
-# area variables (in square meters)
-hall = 11.25
-kit = 18.0
-liv = 20.0
-bed = 10.75
-bath = 9.50
+# Import numpy
+import numpy as np
 
-# Adapt list areas
-areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "bathroom", bath]
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
 
-# Print areas
-print(areas)
+# Print out the type of np_baseball
+print(type(np_baseball))
 
-# ----- List of lists -----
+# Print out the shape of np_baseball
+print(np_baseball.shape)
 
-# area variables (in square meters)
-hall = 11.25
-kit = 18.0
-liv = 20.0
-bed = 10.75
-bath = 9.50
+# ----- Baseball data in 2D form -----
 
-# house information as list of lists
-house = [["hallway", hall],
-         ["kitchen", kit],
-         ["living room", liv],
-         ["bedroom", bed],
-         ["bathroom", bath]]
+# baseball is available as a regular list of lists
 
-# Print out house
-print(house)
+# Import numpy package
+import numpy as np
 
-# Print out the type of house
-print(type(house))
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
 
-# ====== 4. SUBSETTING LISTS ====== 
+# Print out the shape of np_baseball
+print(np_baseball.shape)
 
-# ----- Subset and conquer -----
+# ----- Subsetting 2D NumPy Arrays -----
 
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+# baseball is available as a regular list of lists
 
-# Print out second element from areas
-print(areas[1])
+# Import numpy package
+import numpy as np
 
-# Print out last element from areas
-print(areas[-1])
+# Create np_baseball (2 cols)
+np_baseball = np.array(baseball)
 
-# Print out the area of the living room
-print(areas[5])
+# Print out the 50th row of np_baseball
+print(np_baseball[49,:])
 
-# ----- Subset and calculate -----
+# Select the entire second column of np_baseball: np_weight
+np_weight = np_baseball[:,1]
 
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+# Print out height of 124th player
+print(np_baseball[123,0])
 
-# Sum of kitchen and bedroom area: eat_sleep_area
-eat_sleep_area = areas[3] + areas[-3]
+# ----- 2D Arithmetic -----
 
-# Print the variable eat_sleep_area
-print(eat_sleep_area)
+# baseball is available as a regular list of lists
+# updated is available as 2D numpy array
 
-# ----- Slicing and dicing -----
+# Import numpy package
+import numpy as np
 
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+# Create np_baseball (3 cols)
+np_baseball = np.array(baseball)
 
-# Use slicing to create downstairs
-downstairs = areas[0:6]
+# Print out addition of np_baseball and updated
+print(np_baseball + updated)
 
-# Use slicing to create upstairs
-upstairs = areas[-4:]
+# Create numpy array: conversion
+conversion = np.array([0.0254, 0.453592, 1])
 
-# Print out downstairs and upstairs
-print(downstairs)
-print(upstairs)
+# Print out product of np_baseball and conversion
+print(np_baseball * conversion)
 
-# ----- Slicing and dicing (2) -----
 
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+# ====== 3. NumPy: Basic Statistics ======
 
-# Alternative slicing to create downstairs
-downstairs = areas[:6]
+# ----- Average versus median -----
 
-# Alternative slicing to create upstairs
-upstairs = areas[-4:]
+# np_baseball is available
 
-# ----- Subsetting lists of lists -----
+# Import numpy
+import numpy as np
 
-x = [["a", "b", "c"],
-     ["d", "e", "f"],
-     ["g", "h", "i"]]
-x[2][0]
-x[2][:2]
+# Create np_height from np_baseball
+np_height = np_baseball[:, 0]
 
-# ====== 5. LIST MANIPULATION ====== 
+# Print out the mean of np_height
+print(np.mean(np_height))
 
-# ----- Replace list elements -----
+# Print out the median of np_height
+print(np.median(np_height))
 
-# Create the areas list
-areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+# ----- Explore the baseball data -----
 
-# Correct the bathroom area
-areas[-1] = 10.50
+# np_baseball is available
 
-# Change "living room" to "chill zone"
-areas[4] = "chill zone"
+# Import numpy
+import numpy as np
 
-# ----- Extend a list -----
+# Print mean height (first column)
+avg = np.mean(np_baseball[:,0])
+print("Average: " + str(avg))
 
-# Create the areas list and make some changes
-areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
-         "bedroom", 10.75, "bathroom", 10.50]
+# Print median height. Replace 'None'
+med = np.median(np_baseball[:,0])
+print("Median: " + str(med))
 
-# Add poolhouse data to areas, new list is areas_1
-areas_1 = areas + ["poolhouse", 24.5]
+# Print out the standard deviation on height. Replace 'None'
+stddev = np.std(np_baseball[:,0])
+print("Standard Deviation: " + str(stddev))
 
-# Add garage data to areas_1, new list is areas_2
-areas_2 = areas_1 + ["garage", 15.45]
+# Print out correlation between first and second column. Replace 'None'
+corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
+print("Correlation: " + str(corr))
 
-# ----- Delete list elements -----
+# ----- Blend it all together -----
 
-x = ["a", "b", "c", "d"]
-del(x[1])
+# heights and positions are available as lists
 
-# ----- Inner workings of lists -----
+# Import numpy
+import numpy as np
 
-# Create list areas
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+# Convert positions and heights to numpy arrays: np_positions, np_heights
+np_positions = np.array(positions)
+np_heights = np.array(heights)
 
-# Create areas_copy
-areas_copy = areas[:]
+# Heights of the goalkeepers: gk_heights
+gk_heights = np_heights[np_positions == 'GK']
 
-# Change areas_copy
-areas_copy[0] = 5.0
+# Heights of the other players: other_heights
+other_heights = np_heights[np_positions != 'GK']
 
-# Print areas
-print(areas)
+# Print out the median height of goalkeepers. Replace 'None'
+print("Median height of goalkeepers: " + str(np.median(gk_heights)))
 
-# ====== 6. FUNCTIONS ====== 
-
-# ----- Familiar functions -----
-
-# Create variables var1 and var2
-var1 = [1, 2, 3, 4]
-var2 = True
-
-# Print out type of var1
-print(type(var1))
-
-# Print out length of var1
-print(len(var1))
-
-# Convert var2 to an integer: out2
-out2 = int(var2)
-
-# ----- Help! -----
-
-help(max)
-"?max"
-
-# ----- Multiple arguments -----
-
-# Create lists first and second
-first = [11.25, 18.0, 20.0]
-second = [10.75, 9.50]
-
-# Paste together first and second: full
-full = first + second
-
-# Sort full in descending order: full_sorted
-full_sorted = sorted(full, reverse = True)
-
-# Print out full_sorted
-print(full_sorted)
-
-# ====== 7. METHODS ====== 
-
-# ----- String Methods -----
-
-# string to experiment with: place
-place = "poolhouse"
-
-# Use upper() on place: place_up
-place_up = place.upper()
-
-# Print out place and place_up
-print(place)
-print(place_up)
-
-# Print out the number of o's in place
-print(place.count('o'))
-
-# ----- List Methods -----
-
-# Create list areas
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
-
-# Print out the index of the element 20.0
-print(areas.index(20.0))
-
-# Print out how often 9.50 appears in areas
-print(areas.count(9.50))
-
-# ----- List Methods (2) -----
-
-# Create list areas
-areas = [11.25, 18.0, 20.0, 10.75, 9.50]
-
-# Use append twice to add poolhouse and garage size
-areas.append(24.5)
-areas.append(15.45)
-
-# Print out areas
-print(areas)
-
-# Reverse the orders of the elements in areas
-areas.reverse()
-
-# Print out areas
-print(areas)
+# Print out the median height of other players. Replace 'None'
+print("Median height of other players: " + str(np.median(other_heights)))
