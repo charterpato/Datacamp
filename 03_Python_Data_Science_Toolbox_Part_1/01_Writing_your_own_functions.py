@@ -163,4 +163,8 @@ def count_entries(df, col_name):
 result = count_entries(tweets_df, 'lang')
 
 # Print the result
+<<<<<<< HEAD
 print(result)
+=======
+print(result)
+>>>>>>> 119269a70db26cf8ff92daa953e7fdea2f8a78f1
