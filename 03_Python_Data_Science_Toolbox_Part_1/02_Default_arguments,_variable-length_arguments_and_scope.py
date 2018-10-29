@@ -25,7 +25,7 @@ change_team()
 print(team)
 
 
-# ===== NESTED FUNCTIONS =====
+# ===== 2. NESTED FUNCTIONS =====
 
 # ----- Nested Functions I -----
 
@@ -100,7 +100,7 @@ def echo_shout(word):
 echo_shout('hello')
 
 
-# ===== DEFAULT AND FLEXIBLE ARGUMENTS =====
+# ===== 3. DEFAULT AND FLEXIBLE ARGUMENTS =====
 
 # ----- Functions with one default argument -----
 
