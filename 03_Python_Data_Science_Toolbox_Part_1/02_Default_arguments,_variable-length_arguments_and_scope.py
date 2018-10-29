@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ===== 1. SCOPE AND USER-DEFINED FUNCTIONS =====
 
 # ----- The keyword global -----
@@ -106,6 +105,4 @@ echo_shout('hello')
 # ----- Functions with one default argument -----
 
 
-=======
->>>>>>> 119269a70db26cf8ff92daa953e7fdea2f8a78f1
 
