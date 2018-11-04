@@ -104,7 +104,7 @@ d = np.recfromcsv(file, delimiter=',', names=True)
 print(d[:3])
 
 
-# ===== IMPORTING FLAT FILES USING PANDAS =====
+# ===== 3. IMPORTING FLAT FILES USING PANDAS =====
 
 # ----- Using pandas to import flat files as DataFrames (1) -----
 
