@@ -14,10 +14,10 @@
 
 ### Importing & Cleaning Data with Python
 
-01. Importing Data in Python (Part 1)
+05. Importing Data in Python (Part 1)
 
-02. Importing Data in Python (Part 2)
+06. Importing Data in Python (Part 2)
 
-03. Introduction to Databases in Python
+07. Introduction to Databases in Python
 
-04. Cleaning Data in Python
+08. Cleaning Data in Python
